@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BinaryStudioAcademy_TestFacebooklikeApp2.DataAccess;
+using BinaryStudioAcademy_TestFacebooklikeApp2.Infrastructure;
 using BinaryStudioAcademy_TestFacebooklikeApp2.Models;
 
 namespace BinaryStudioAcademy_TestFacebooklikeApp2.Controllers
@@ -37,9 +38,15 @@ namespace BinaryStudioAcademy_TestFacebooklikeApp2.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Login()
+        [HttpPost]
+        public ActionResult Login(LoginModel model)
         {
-            return View();
+            if (string.IsNullOrEmpty(model.Email) || string.IsNullOrEmpty(model.Password))
+            {
+                return View(model);
+            }
+            SimpleSessionPersister.Username = model.Email;
+            return RedirectToAction("Index","Profile");
         }
     }
 }
