@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="DataAccess\DataContext.cs" />
     <Compile Include="DataAccess\DataRepository.cs" />
     <Compile Include="DataAccess\IRepository.cs" />
@@ -81,7 +82,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\AppConfiguration.cs" />
+    <Compile Include="Infrastructure\BaseController.cs" />
     <Compile Include="Infrastructure\Clock.cs" />
+    <Compile Include="Infrastructure\CustomIdentity.cs" />
+    <Compile Include="Infrastructure\CustomPrincipal.cs" />
     <Compile Include="Infrastructure\DateTimeExtensions.cs" />
     <Compile Include="Infrastructure\IConfiguration.cs" />
     <Compile Include="Infrastructure\IIdentifiable.cs" />
@@ -174,6 +178,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Login\Registration.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Login\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Profile\Index.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
