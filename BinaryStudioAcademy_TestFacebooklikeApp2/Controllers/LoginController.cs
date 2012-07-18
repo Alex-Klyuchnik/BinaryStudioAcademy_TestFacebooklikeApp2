@@ -38,6 +38,11 @@ namespace BinaryStudioAcademy_TestFacebooklikeApp2.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
         [HttpPost]
         public ActionResult Login(LoginModel model)
         {

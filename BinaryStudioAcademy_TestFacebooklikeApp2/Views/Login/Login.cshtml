@@ -3,9 +3,27 @@
 @{
     ViewBag.Title = "Login";
 }
-
-<div>
-    <h2>Log in</h2>
-
+<div class="container">
+@using (Html.BeginForm())
+{
+<fieldset style="width: 280px;">
+    <legend>Login</legend>
+    <p>
+        <label>
+            Email</label>
+        @Html.TextBoxFor(x => x.Email)
+    </p>
+    <p>
+        <label>
+            Password</label>
+        @Html.TextBoxFor(x => x.Password)
+    </p>
+    <p>
+        <input type="submit" value="login" />
+    </p>
+</fieldset>
+}
+@Html.ActionLink("Return to main page","Index","Login")
+@Html.ActionLink("Register","Registration","Login")
     
 </div>
