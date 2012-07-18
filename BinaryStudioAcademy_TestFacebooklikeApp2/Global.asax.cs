@@ -35,7 +35,7 @@ namespace BinaryStudioAcademy_TestFacebooklikeApp2
         {
            Database.SetInitializer(new CreateDatabaseIfNotExists<DataContext>());
            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<DataContext>());
-
+           
             
             AreaRegistration.RegisterAllAreas();
 
