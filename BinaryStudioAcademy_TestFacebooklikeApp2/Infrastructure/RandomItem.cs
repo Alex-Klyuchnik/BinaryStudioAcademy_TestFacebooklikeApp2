@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using FizzWare.NBuilder;
 
-namespace BinaryStudio.ClientManager.DomainModel.Infrastructure
+namespace BinaryStudioAcademy_TestFacebooklikeApp2.Infrastructure
 {
     class RandomItem<T>
     {

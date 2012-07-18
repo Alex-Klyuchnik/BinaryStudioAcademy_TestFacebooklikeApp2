@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BinaryStudio.ClientManager.DomainModel.Infrastructure
+namespace BinaryStudioAcademy_TestFacebooklikeApp2.Infrastructure
 {
     public static class StringExtensions
     {

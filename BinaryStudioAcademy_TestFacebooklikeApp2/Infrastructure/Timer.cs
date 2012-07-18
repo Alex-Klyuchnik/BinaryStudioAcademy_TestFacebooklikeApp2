@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 
-namespace BinaryStudio.ClientManager.DomainModel.Infrastructure
+namespace BinaryStudioAcademy_TestFacebooklikeApp2.Infrastructure
 {
     /// <summary>
     /// Provides possibility to execute certain code time to time.

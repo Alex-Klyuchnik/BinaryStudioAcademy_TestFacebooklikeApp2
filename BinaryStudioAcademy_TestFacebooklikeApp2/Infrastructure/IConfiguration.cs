@@ -1,4 +1,4 @@
-namespace BinaryStudio.ClientManager.DomainModel.Infrastructure
+namespace BinaryStudioAcademy_TestFacebooklikeApp2.Infrastructure
 {
     /// <summary>
     /// Provides access to configuration values. Behaves like dictionary.

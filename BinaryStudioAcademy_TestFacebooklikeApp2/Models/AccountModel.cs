@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using BinaryStudio.ClientManager.DomainModel.Infrastructure;
+using BinaryStudioAcademy_TestFacebooklikeApp2.Infrastructure;
 
 namespace BinaryStudioAcademy_TestFacebooklikeApp2.Models
 {
@@ -12,5 +12,6 @@ namespace BinaryStudioAcademy_TestFacebooklikeApp2.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public bool IsIdentified { get; set; }
+        public LoginModel Login { get; set; }
     }
 }

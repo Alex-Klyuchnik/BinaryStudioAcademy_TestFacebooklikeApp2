@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace BinaryStudio.ClientManager.DomainModel.Infrastructure
+namespace BinaryStudioAcademy_TestFacebooklikeApp2.Infrastructure
 {
     /// <summary>
     /// implements extension metods for safe chained calls

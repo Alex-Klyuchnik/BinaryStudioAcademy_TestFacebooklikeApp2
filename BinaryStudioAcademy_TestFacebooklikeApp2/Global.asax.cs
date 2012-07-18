@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using BinaryStudioAcademy_TestFacebooklikeApp2.DataAccess;
 
 namespace BinaryStudioAcademy_TestFacebooklikeApp2
 {
@@ -31,6 +33,10 @@ namespace BinaryStudioAcademy_TestFacebooklikeApp2
 
         protected void Application_Start()
         {
+           Database.SetInitializer(new CreateDatabaseIfNotExists<DataContext>());
+           Database.SetInitializer(new DropCreateDatabaseIfModelChanges<DataContext>());
+
+            
             AreaRegistration.RegisterAllAreas();
 
             RegisterGlobalFilters(GlobalFilters.Filters);
