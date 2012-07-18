@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Autofac;
+using Autofac.Integration.Mvc;
 using BinaryStudioAcademy_TestFacebooklikeApp2.DataAccess;
+using BinaryStudioAcademy_TestFacebooklikeApp2.Infrastructure;
 
 namespace BinaryStudioAcademy_TestFacebooklikeApp2
 {
@@ -41,6 +45,24 @@ namespace BinaryStudioAcademy_TestFacebooklikeApp2
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+            SetDependencyResolver();
+        }
+        private void SetDependencyResolver()
+        {
+            var builder = new ContainerBuilder();
+
+            builder.RegisterControllers(Assembly.GetExecutingAssembly());
+            builder.RegisterModelBinders(Assembly.GetExecutingAssembly());
+
+            builder
+                .RegisterAssemblyTypes(
+                    Assembly.GetAssembly(typeof(IIdentifiable)),
+                    Assembly.GetExecutingAssembly())
+                .AsImplementedInterfaces();
+
+            builder.RegisterType<DataRepository>().As<IRepository>().InstancePerHttpRequest();
+
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(builder.Build()));
         }
     }
 }
