@@ -30,6 +30,13 @@ namespace BinaryStudioAcademy_TestFacebooklikeApp2.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult EditProfile(AccountModel user)
+        {
+            repository.Save(user);
+            return View("Index", user);
+        }
+
         public ActionResult Search()
         {
             return View();
