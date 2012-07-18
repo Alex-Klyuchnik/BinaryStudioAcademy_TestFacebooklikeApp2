@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Registration";
+}
+
+<div class="container">
+    <h2>Registration</h2>
+    <form action="./" method="POST"> 
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Email):
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.Email)
+            @Html.ValidationMessageFor(m => m.Email)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Password):
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(m => m.Password)
+            @Html.ValidationMessageFor(m => m.Password)
+        </div>
+    
+        <p>
+            <input class="ui-button-icon-primary" type="submit" value="Register!" />
+            
+        </p>    </form>
+        @Html.ActionLink("Return to main page","Index","Login")
+
+</div>

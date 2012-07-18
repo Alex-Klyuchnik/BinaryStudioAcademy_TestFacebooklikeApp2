@@ -16,5 +16,10 @@ namespace BinaryStudioAcademy_TestFacebooklikeApp2.Controllers
             return View();
         }
 
+        public ActionResult Registration()
+        {
+            return View();
+        }
+
     }
 }
