@@ -1,0 +1,30 @@
+﻿@model BinaryStudioAcademy_TestFacebooklikeApp2.Models.AccountModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<div>
+   @if (Model != null)
+   {
+       <html>
+       First Name: @Model.FirstName
+       <br/>
+       Last Name: @Model.FirstName
+       <br/>
+       Email: @Model.Login.Email
+       <br/>
+       Gender: @Model.Gender
+       <br/>
+       DoB: @Model.DateOfBirth.ToString("dd.MM.yyyy")
+       <br/>
+       Marital status: @Model.MaritalStatus
+       </html>
+   }
+     
+
+<br/>
+    <br/>
+    <li>@Html.ActionLink("Back to index page","Search","Profile")</li>
+</div>
