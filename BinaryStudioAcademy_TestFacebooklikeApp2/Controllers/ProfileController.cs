@@ -18,5 +18,19 @@ namespace BinaryStudioAcademy_TestFacebooklikeApp2.Controllers
             return View(new LoginModel{Email = this.User.Identity.Name});
         }
 
+        public ActionResult EditProfile()
+        {
+            return View();
+        }
+
+        public ActionResult Search()
+        {
+            return View();
+        }
+
+        public ActionResult Suggest()
+        {
+            return View();
+        }
     }
 }
